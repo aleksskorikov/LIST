@@ -1,0 +1,217 @@
+body{
+    background: rgb(235, 208, 139);
+}
+.conteiner {
+    max-width: 1450px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: goldenrod;
+
+    // .header__logo
+
+    &__logo {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    // .header__logo-img
+
+    &__logo-img {
+        width: 12rem;
+        height: 10rem;
+    }
+
+    // .header__title
+
+    &__title {
+        font-size: 6rem;
+        color: rgb(87, 72, 72);
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+// .header__search-input
+
+    &__search-input {
+        width: 20rem;
+        height: 3rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.5rem;
+        padding-left: 1rem;
+    }
+
+    // .header__search-btn
+
+    &__search-btn {
+        width: 8rem;
+        height: 3rem;
+        border-radius: 10px;
+        background: rgb(226, 55, 55);
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    // .header__btn
+
+    &__btn {
+        width: 15rem;
+        height: 3rem;
+        background: red;
+        border-radius: 10px;
+        font-size: 1.5rem;
+    }
+}
+
+.block {
+    // height: 100vh;
+
+    padding-top: 5rem;
+    
+    // .block__lists
+
+    &__lists {
+        width: fit-content; 
+        padding: 3rem;
+        border: 2px solid goldenrod;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+}
+
+.block__lists-list{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    &:hover{
+        background: rgb(235, 160, 160);
+        border: 1px solid red;
+    }
+}
+.block__lists-linc{
+    color: black;
+    &:hover{
+        color:rgb(241, 233, 233) ;
+        
+    }
+    .block__list-block{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .block__lists-name{
+        font-size: 2rem;
+        margin: 0 10px 3px 0;
+    }
+    .name{
+        font-size: 3rem;
+    }
+    .block__lists-mail, .block__lists-city{
+        font-size: 1.5rem;
+    }
+    .mail, .city{
+        font-size: 2rem;
+        margin:0 0.5rem 0 0;
+    }
+    .block__lists-city{
+        margin-left: 2rem;
+        margin-top: 1rem;
+    }
+}
+.isnot-wanted{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    color: red;
+}
+
+@media (max-width: 1025px){
+    .header{
+        display: grid;
+        grid-template-columns: 40% 60%;
+        justify-items: center;
+        align-items: center;
+        gap: 2rem 0;
+        padding: 2rem 0;
+        &__logo {
+            grid-column: 1;
+            grid-row: 1;
+            }
+        &__title {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        &__search-form{
+            display: flex;
+            grid-column: 1;
+            grid-row: 2;
+            margin-left:10rem;
+        }
+        &__btn {
+            grid-column: 2;
+            grid-row: 2;
+        }
+    }
+}
+@media (max-width: 769px) {
+    .header {
+
+        &__search-form {
+            grid-column: 3/1;
+            grid-row: 2;
+            margin-left: 0rem;
+        }
+
+        &__btn {
+            grid-column: 3/1;
+            grid-row: 3;
+        }
+    }
+}
+
+@media (max-width: 541px) {
+    .header {
+        &__logo {
+            grid-column: 3/1;
+            grid-row: 1;
+        }
+        &__title {
+            grid-column: 3/1;
+            grid-row: 2;
+        }
+        &__search-form {
+            grid-column: 3/1;
+            grid-row: 3;
+            margin-left: 0rem;
+        }
+
+        &__btn {
+            grid-column: 3/1;
+            grid-row: 4;
+        }
+    }
+    .block__lists-linc .block__list-block {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .block__lists-linc .block__lists-city {
+        margin-left: 0;
+    }
+}
+@media (max-width: 413px) {
+    .header {
+        &__search-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+}
+

@@ -1,0 +1,119 @@
+@import './mixins';
+body{
+    background: rgb(235, 208, 139);
+}
+.details {
+
+    // .details__block
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .details__block-title
+
+    &__block-title {
+        @include adaptiv-font(128, 64);
+        color: rgb(87, 72, 72);
+        text-transform: uppercase;
+        font-weight: bold;
+        margin:2rem 0 3rem;
+    }
+
+    // .details__block-text
+
+    &__block-text {
+        font-family: "Pacifico", cursive;
+        max-width: 90%;
+        @include adaptiv-font(40, 20);
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 2rem;
+        letter-spacing: 0.5rem;
+        line-height: 3.5rem;
+    }
+
+    // .details__block-btn
+
+    &__block-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        height: 3rem;
+        background: rgb(70, 149, 70);
+        border-radius: 20px;
+        color: aliceblue;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+}
+.details__block-block{
+        display: flex;
+        gap: 6rem;
+        font-family: "Pacifico", cursive;
+}
+.block {
+
+    &__discription-img {
+        width: 500px;
+    }   
+
+    // .block__discription-name
+
+    &__discription-name {
+        @include adaptiv-font(64, 36);
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+
+    // .block__discription-mail
+
+    &__discription-mail {
+        @include adaptiv-font(21, 14);
+        margin-bottom: 0.5rem;
+    }
+
+    // .block__discription-phon
+
+    &__discription-phon {
+        @include adaptiv-font(21, 14);
+        margin-bottom: 0.5rem;
+    }
+
+    // .block__discription-site
+
+    &__discription-site {
+        @include adaptiv-font(21, 14);
+        margin-bottom: 0.5rem;
+    }
+
+    // .block__discription-address
+
+    &__discription-address {
+        @include adaptiv-font(21, 14);
+        margin-bottom: 0.5rem;
+    }
+
+}  
+.description{
+    @include adaptiv-font(31, 18);
+}
+@media (max-width: 541px) {
+    .details__block-block {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .block{
+        &__discription-img {
+            width: 400px;
+        }
+    }
+    .details__block-discription{
+        text-align: center ;
+    }
+}
